@@ -7,7 +7,18 @@ function App() {
   return (
     <Router>
       <div className="app">
+        <Nav />
         <Switch>
+          <Route path="/watched" element={
+            <>
+              <h1>Watched</h1>
+            </>
+          }/>
+          <Route path="/cart" element={
+            <>
+              <h1>Cart</h1>
+            </>
+          }/>
           <Route path="/checkout" element={
             <>
               <h1>Checkout</h1>
@@ -19,7 +30,9 @@ function App() {
             </>
           }/>
           <Route path="/" element={
-            <Nav />
+            <>
+              <div style={{height:"1000px"}}><h1>Main</h1></div>
+            </>
           }/>
         </Switch>
       </div>

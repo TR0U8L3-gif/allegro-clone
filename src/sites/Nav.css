@@ -1,8 +1,16 @@
+:root
+{
+    --allegro-orange: #ff5a00;
+}
+
 header
 {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 0;
     display: block;
+    background-color: white;
 }
 
 header::after
@@ -16,7 +24,7 @@ header::after
     background-color: lightgray;
 }
 
-.container
+.header__container
 {
     
     max-width: 1450px;
@@ -29,11 +37,11 @@ header::after
     justify-content: space-between;
 }
 
-.container img
+.header__container img
 {
     object-fit: contain;
 }
-.form
+.header__form
 {
     width: 48%;
     display: flex;
@@ -41,7 +49,7 @@ header::after
     justify-content: center;
 }
 
-.form .search
+.header__search 
 {
     background-color: transparent;
     flex-grow: 1;
@@ -52,15 +60,17 @@ header::after
     color: gray;
     font-size: 15px;
     border-style: solid;
+    outline: none;
 }
 
-.form button
+
+.header__form button
 {
     width: 86px;
     height: 40px;
     padding: 0 13px;
     border: none;
-    background-color: #ff5a00;
+    background-color: var(--allegro-orange);
     color: white;
     font-weight: 500;
     letter-spacing: 2px;
@@ -70,7 +80,7 @@ header::after
 }
 
 
-.options
+.header__options
 {
     width: 27.5%;
     display: flex;
@@ -78,30 +88,65 @@ header::after
     justify-content: space-between;
 }
 
-.options img
+.header__options img
 {
     padding: 4px;
 }
 
+.header__localization
+{
+    width:28px;
+    height:28px;
+    margin: 0;
+}
+
+.header__bascet
+{
+    position: relative;
+}
+
+.header__itemcount
+{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: 0;
+    right: 0;
+    transform: translate(-25%,-25%);
+    color: white;
+    background-color: var(--allegro-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 13px;
+}
+
 @media only screen and (max-width: 1000px) {
-    .container
+    .header__container
     {
         padding: 16px;
         flex-wrap: wrap;
     }
-    .form
+    .header__form
     {
         width: 100%;
         flex-grow: 1;
         margin-top: 5px;
         order: 3;
     }
-    .options
+    .header__options
     {
         width: auto;
+        margin: 0;
+        margin-left: auto;
     }
-    .options img
+    .header__options img
     {
         margin-left: 16px;
     }
+    .header__options img.header__localization
+    {
+        margin-left: 0px;
+    } 
 }
