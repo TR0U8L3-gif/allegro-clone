@@ -1,0 +1,150 @@
+:root
+{
+    --gray: #eceff1;
+    --orange: #ff5a00;
+}
+.home
+{
+    width: 100%;
+    height: auto;
+    background-color: var(--gray);
+}
+.home__grid
+{
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(0px, 1fr) 23%;
+    grid-template-rows: auto 1fr;
+    background-color: var(--gray);
+    padding-bottom: 16px;
+}
+
+.home__slider
+{
+    height: auto;
+    width: 1fr;
+}
+.home__slider .slider
+{
+    background-color: forestgreen;
+    height: 256px;
+    width: 100%;
+}
+.home__slider .slider ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: inherit;
+    height: inherit;
+}
+.home__slider .slider li img
+{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center center;
+}
+.home__slider .slider li
+{
+    width: inherit;
+    height: inherit;
+    display: none;
+}
+.home__slider .slider li.index.s1
+{
+    display: block;
+}
+
+
+.home__slider .buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home__slider .buttons .but
+{
+    margin: 0;
+    padding: 8px;
+    height: 42px;
+    flex: 1 1 0%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: white;
+}
+.home__slider .buttons .but.s1
+{
+    border-top: solid 2px var(--orange);
+}
+.home__popular
+{
+    padding: 24px;
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+.home__popular p
+{
+    margin-bottom: 16px;
+}
+.home__popular .options
+{
+    display: flex;
+}
+.home__popular .options .opt
+{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 8px;
+}
+.home__popular .options .opt img{
+    height: 132px;
+    width: 132px;
+}
+.home__popular .options .opt p
+{
+    text-align: center;
+    margin: 0;
+}
+
+.home__premium
+{
+    background-color: white;
+}
+.home__foryou
+{
+    background-color: white;
+}
+
+@media only screen and (max-width: 1000px) 
+{ 
+    .home__premium
+    {
+        display: none;
+    }
+    .home__foryou
+    {
+        display: none;
+    }  
+    .home__grid
+    {
+        max-width: 1400px;
+        margin: auto;
+        width: 100%;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        background-color: var(--gray);
+    }
+
+}

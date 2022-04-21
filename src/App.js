@@ -1,7 +1,8 @@
 import React from "react";
-import {BrowserRouter as Router, Routes as Switch, Route, Link } from "react-router-dom";
+import {BrowserRouter as Router, Routes as Switch, Route } from "react-router-dom";
 import './App.css';
 import Nav from "./sites/Nav";
+import Home from "./sites/Home";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           }/>
           <Route path="/" element={
             <>
-              <div style={{height:"1000px"}}><h1>Main</h1></div>
+              <Home />
             </>
           }/>
         </Switch>
